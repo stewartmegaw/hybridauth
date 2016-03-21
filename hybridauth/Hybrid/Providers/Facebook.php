@@ -67,7 +67,9 @@ class Hybrid_Providers_Facebook extends Hybrid_Provider_Model {
 	 * {@inheritdoc}
 	 */
 	function loginBegin() {
-		$parameters = array("scope" => $this->scope, "redirect_uri" => $this->endpoint, "display" => "page");
+		// EDIT STEWART MEGAW 12/3/16
+		$parameters = array("scope" => $this->scope, "redirect_uri" => $this->endpoint, "display" => "page", "auth_type" => "rerequest");
+//		$parameters = array("scope" => $this->scope, "redirect_uri" => $this->endpoint, "display" => "page");
 		$optionals = array("scope", "redirect_uri", "display", "auth_type");
 
 		foreach ($optionals as $parameter) {
